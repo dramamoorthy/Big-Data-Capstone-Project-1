@@ -1,0 +1,17 @@
+--5) Find the most popular top 10 job positions for H1B visa applications for each year?
+--a) for all the applications
+
+
+select  year,job_title,count(*)as total from h1b_final where year=2011 group by year,job_title order by total desc limit 10;
+
+select  year,job_title,count(*)as total from h1b_final where year=2012 group by year,job_title order by total desc limit 10;
+
+select  year,job_title,count(*)as total from h1b_final where year=2013 group by year,job_title order by total desc limit 10;
+
+select  year,job_title,count(*)as total from h1b_final where year=2014 group by year,job_title order by total desc limit 10;
+
+select  year,job_title,count(*)as total from h1b_final where year=2015 group by year,job_title order by total desc limit 10;
+
+select  year,job_title,count(*)as total from h1b_final where year=2016 group by year,job_title order by total desc limit 10;
+
+--The cleansed data is grouped by year and job title and then the total number of applicants is counted respectively and the out put is oreded by the total applicants and the top 10 jobs are printed.

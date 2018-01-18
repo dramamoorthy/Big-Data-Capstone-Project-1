@@ -1,0 +1,28 @@
+--8) Find the average Prevailing Wage for each Job for each Year (take part time and full time 
+--separate). Arrange the output in descending order - [Certified and Certified Withdrawn.]
+
+select year,job_title,full_time_position,avg(prevailing_wage)as average from h1b_final where year=2011 and full_time_position="Y" and (case_status="CERTIFIED" or case_status="CERTIFIED-WITHDRAWN") group by year,job_title,full_time_position order by average desc; 
+ 
+select year,job_title,full_time_position,avg(prevailing_wage)as average from h1b_final where year=2012 and full_time_position="Y" and (case_status="CERTIFIED" or case_status="CERTIFIED-WITHDRAWN") group by year,job_title,full_time_position order by average desc; 
+
+select year,job_title,full_time_position,avg(prevailing_wage)as average from h1b_final where year=2013 and full_time_position="Y" and (case_status="CERTIFIED" or case_status="CERTIFIED-WITHDRAWN") group by year,job_title,full_time_position order by average desc; 
+
+select year,job_title,full_time_position,avg(prevailing_wage)as average from h1b_final where year=2014 and full_time_position="Y" and (case_status="CERTIFIED" or case_status="CERTIFIED-WITHDRAWN") group by year,job_title,full_time_position order by average desc; 
+
+select year,job_title,full_time_position,avg(prevailing_wage)as average from h1b_final where year=2015 and full_time_position="Y" and (case_status="CERTIFIED" or case_status="CERTIFIED-WITHDRAWN") group by year,job_title,full_time_position order by average desc; 
+
+select year,job_title,full_time_position,avg(prevailing_wage)as average from h1b_final where year=2016 and full_time_position="Y" and (case_status="CERTIFIED" or case_status="CERTIFIED-WITHDRAWN") group by year,job_title,full_time_position order by average desc; 
+
+---------------------------
+
+select year,job_title,full_time_position,avg(prevailing_wage)as average from h1b_final where year=2011 and full_time_position="N" and (case_status="CERTIFIED" or case_status="CERTIFIED-WITHDRAWN") group by year,job_title,full_time_position order by average desc; 
+
+select year,job_title,full_time_position,avg(prevailing_wage)as average from h1b_final where year=2012 and full_time_position="N" and (case_status="CERTIFIED" or case_status="CERTIFIED-WITHDRAWN") group by year,job_title,full_time_position order by average desc; 
+
+select year,job_title,full_time_position,avg(prevailing_wage)as average from h1b_final where year=2013 and full_time_position="N" and (case_status="CERTIFIED" or case_status="CERTIFIED-WITHDRAWN") group by year,job_title,full_time_position order by average desc; 
+
+select year,job_title,full_time_position,avg(prevailing_wage)as average from h1b_final where year=2014 and full_time_position="N" and (case_status="CERTIFIED" or case_status="CERTIFIED-WITHDRAWN") group by year,job_title,full_time_position order by average desc; 
+
+select year,job_title,full_time_position,avg(prevailing_wage)as average from h1b_final where year=2015 and full_time_position="N" and (case_status="CERTIFIED" or case_status="CERTIFIED-WITHDRAWN") group by year,job_title,full_time_position order by average desc; 
+
+select year,job_title,full_time_position,avg(prevailing_wage)as average from h1b_final where year=2016 and full_time_position="N" and (case_status="CERTIFIED" or case_status="CERTIFIED-WITHDRAWN") group by year,job_title,full_time_position order by average desc; 

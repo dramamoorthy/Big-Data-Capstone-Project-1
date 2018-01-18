@@ -1,0 +1,18 @@
+--2b) find top 5 locations in the US who have got certified visa for each year.[certified]
+
+
+select year,count(*)as total ,worksite from h1b_final where year=2011 and case_status="CERTIFIED" group by  year,worksite order by total desc limit 5;
+
+select year,count(*)as total ,worksite from h1b_final where year=2012 and case_status="CERTIFIED" group by  year,worksite order by total desc limit 5;
+
+select year,count(*)as total ,worksite from h1b_final where year=2013 and case_status="CERTIFIED" group by  year,worksite order by total desc limit 5;
+
+select year,count(*)as total ,worksite from h1b_final where year=2014 and case_status="CERTIFIED" group by  year,worksite order by total desc limit 5;
+
+select year,count(*)as total ,worksite from h1b_final where year=2015 and case_status="CERTIFIED" group by  year,worksite order by total desc limit 5;
+
+select year,count(*)as total ,worksite from h1b_final where year=2016 and case_status="CERTIFIED" group by  year,worksite order by total desc limit 5;
+
+
+--The cleansed data is goruped on the basis of locations and year and the conditions are specified to the required year and the case status to be CERTIFIED and the output is ordered by the total number of applicants in descending order and top five is printed.
+

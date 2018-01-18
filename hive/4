@@ -1,0 +1,16 @@
+--4)Which top 5 employers file the most petitions each year? - Case Status - ALL
+
+select year,employer_name,count(*)as total from h1b_final where year=2011 group by year,employer_name order by total desc limit 5;
+
+select year,employer_name,count(*)as total from h1b_final where year=2012 group by year,employer_name order by total desc limit 5;
+
+select year,employer_name,count(*)as total from h1b_final where year=2013 group by year,employer_name order by total desc limit 5;
+
+select year,employer_name,count(*)as total from h1b_final where year=2014 group by year,employer_name order by total desc limit 5;
+
+select year,employer_name,count(*)as total from h1b_final where year=2015 group by year,employer_name order by total desc limit 5;
+
+select year,employer_name,count(*)as total from h1b_final where year=2016 group by year,employer_name order by total desc limit 5;
+
+
+--The cleansed data is grouped by year and employer name and then the required year is passed as the condition and the total applicants are counted and the top 5 are printed.

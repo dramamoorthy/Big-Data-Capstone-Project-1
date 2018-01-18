@@ -1,0 +1,9 @@
+
+--1 a) Is the number of petitions with Data Engineer job title increasing over time?
+
+
+
+select year,job_title,count(*) from h1b_final where job_title='DATA ENGINEER' group by year,job_title order by year;
+
+
+--the cleaned dataset is grouped yearwise and job wise then the number of petitons are counted with a where condition that the job title should be 'DATA ENGINEER' then print the result in the order of year.Then we can observe that the number of applications for the Data Engineer position increases every year from 2011 to 2016.

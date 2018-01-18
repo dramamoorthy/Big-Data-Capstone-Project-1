@@ -1,0 +1,18 @@
+--2 a) Which part of the US has the most Data Engineer jobs for each year?
+
+
+select year,worksite,count(*)as total from h1b_final where job_title="DATA ENGINEER" and year=2011 GROUP BY year,worksite order by total desc limit 1;
+
+select year,worksite,count(*)as total from h1b_final where job_title="DATA ENGINEER" and year=2012 GROUP BY year,worksite order by total desc limit 1;
+
+select year,worksite,count(*)as total from h1b_final where job_title="DATA ENGINEER" and year=2013 GROUP BY year,worksite order by total desc limit 1;
+
+select year,worksite,count(*)as total from h1b_final where job_title="DATA ENGINEER" and year=2014 GROUP BY year,worksite order by total desc limit 1;
+
+select year,worksite,count(*)as total from h1b_final where job_title="DATA ENGINEER" and year=2015 GROUP BY year,worksite order by total desc limit 1;
+
+select year,worksite,count(*)as total from h1b_final where job_title="DATA ENGINEER" and year=2016 GROUP BY year,worksite order by total desc limit 1;
+
+
+-- The cleaned dataset is grouped by year and worksite and then the where condition to find only the Data Engineer applicants and year is specified from 2011 to 2016 individually as a condition.The output is printed in descending order of the count total and the top value is printed.
+
